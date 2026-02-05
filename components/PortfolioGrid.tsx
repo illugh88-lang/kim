@@ -6,12 +6,12 @@ const ALL_PROJECTS: Project[] = [
     id: '1',
     title: 'Brand Renewal',
     category: 'Web design • Brand Identity • Digital Design • Package design',
-    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/ppsu_silm.jpg?raw=true',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/basic_PPSU.jpg?raw=true',
     galleryImages: [
       'https://github.com/illugh88-lang/kim/blob/main/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202026-02-05%20154044.png?raw=true',
       'https://github.com/illugh88-lang/kim/blob/main/basic_PPSU_wide.jpg?raw=true',
-      'https://github.com/illugh88-lang/kim/blob/main/pp_slim%20copy.jpg?raw=true',
-      'https://github.com/illugh88-lang/kim/blob/main/BASIC_PPSU150_detail.jpg?raw=true'
+      'https://github.com/illugh88-lang/kim/blob/main/basic_PP.jpg?raw=true',
+      'https://github.com/illugh88-lang/kim/blob/main/BASIC_PPSU250_detail.jpg?raw=true'
     ],
     link: '#',
     isWide: true,
@@ -21,9 +21,9 @@ const ALL_PROJECTS: Project[] = [
     id: '2',
     title: 'COLOR PP BABY BOTTLE',
     category: 'Design • Package design • Digital Design',
-    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/C_PP140_title_800_1.jpg?raw=true',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/C_PP_twin_title_800.jpg?raw=true',
     galleryImages: [
-      'https://github.com/illugh88-lang/kim/blob/main/C_PP140_detail.jpg?raw=true'
+      'https://github.com/illugh88-lang/kim/blob/main/C_PP_twin_detail.jpg?raw=true'
     ],
     link: '#',
     description: '기존 PP 젖병과는 차별화를 둔 컬러감이 추가된 PP 젖병 제품 기획, 제품 컬러, 인쇄디자인 및 패키지, 제품 사진 촬영을 포함한 상세페이지 디자인 작업'
