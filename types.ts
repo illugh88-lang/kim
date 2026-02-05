@@ -4,6 +4,7 @@ export interface Project {
   title: string;
   category: string;
   imageUrl: string;
+  galleryImages?: string[]; // Added to support "displaying other images"
   link: string;
   description?: string;
   isWide?: boolean;

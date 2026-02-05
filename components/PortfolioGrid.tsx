@@ -1,142 +1,174 @@
-
 import React, { useState } from 'react';
 import { Project } from '../types';
 
 const ALL_PROJECTS: Project[] = [
-  {
-    id: '1',
-    title: 'Luxe Beauty',
-    category: 'UI/UX Design • Web Development • Digital Design',
-    imageUrl: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-    description: '프리미엄 뷰티 브랜드를 위한 고해상도 이커머스 플랫폼입니다. 우아함과 미니멀한 럭셔리에 중점을 둔 인터페이스를 제공합니다.'
-  },
-  {
-    id: '2',
-    title: 'Elegant Pack',
-    category: 'Brand Identity • Digital Design',
-    imageUrl: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-    description: '현대적인 라이프스타일 브랜드를 위한 지속 가능한 패키징 솔루션입니다. 브랜드 아이덴티티 구축부터 디지털 구현까지 통합적인 디자인을 진행했습니다.'
-  },
-  {
+   {
     id: '3',
-    title: 'Ridged',
-    category: 'UI/UX Design • Web Development • Brand Identity • Digital Design',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
+    title: 'Brand Renewal',
+    category: ' Web design • Brand Identity • Digital Design •Package disign',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/ppsu_silm.jpg?raw=true',
+    galleryImages: [
+      'https://github.com/illugh88-lang/kim/blob/main/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202026-02-05%20154044.png?raw=true',
+      'https://github.com/illugh88-lang/kim/blob/main/basic_PPSU_wide.jpg?raw=true',
+      'https://github.com/illugh88-lang/kim/blob/main/pp_slim%20copy.jpg?raw=true',
+      'https://github.com/illugh88-lang/kim/blob/main/BASIC_PPSU150_detail.jpg?raw=true'
+    ],
     link: '#',
     isWide: true,
-    description: '유동적인 디지털 경험을 통해 브루탈리즘 미학을 보여주는 혁신적인 건축 포트폴리오 사이트입니다.'
+    description: '브랜드 로고 리뉴얼 이후 제품 전체적으로 브랜드 아이덴티티를 구축하고자, 제품 베이직 라인 구축 및 회사 홈페이지를 비롯한 전체 상품 상제페이지 리뉴얼'
+  },
+  {
+    id: '1',
+    title: 'COLOR PP BABY BOTTLE',
+    category: 'Design • Package disign • Digital Design',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/C_PP140_title_800_1.jpg?raw=true',
+    galleryImages: [
+      'https://github.com/illugh88-lang/kim/blob/main/C_PP140_detail.jpg?raw=true'
+    ],
+    link: '#',
+    description: '기존 PP 젖병과는 차별화를 둔 컬러감이 추가된 PP 젖병 제품 기획, 제품 컬러, 인쇄디자인 및 패키지, 제품 사진 촬영을 포함한 상세페이지 디자인 작업'
   },
   {
     id: '4',
-    title: 'Water Drops',
-    category: 'UI/UX Design • Web Development • Digital Design',
-    imageUrl: 'https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=1200&auto=format&fit=crop',
+    title: '2023 토끼',
+    category: ' Web design • Brand Identity • Digital Design •Package disign',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/PP_2023_Rabbit_2set_title_800_0.jpg?raw=true',
+    galleryImages: [
+        'https://github.com/illugh88-lang/kim/blob/main/PP_2023_Rabbit_2set_detail.jpg?raw=true',
+    ],
     link: '#',
-    description: '인터랙티브 대시보드와 예술적인 데이터 시각화를 통해 깨끗한 물 데이터를 형상화한 프로젝트입니다.'
+    description: '신년 띠 젖병 프로젝트 #2 2023 토끼 젖병 제품 인쇄디자인 및 패키지 제품 사진 촬영을 포함한 상세페이지 디자인 작업.'
+  },
+  {
+    id: '2',
+    title: '2024 Dragon',
+    category: ' Web design • Brand Identity • Digital Design •Package disign',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/2024_dragon_PP_twin_title_800.jpg?raw=true',
+    galleryImages: [
+      'https://github.com/illugh88-lang/kim/blob/main/2024_dragon_PP_twin_detail.jpg?raw=true'
+    ],
+    link: '#',
+    description: '신년 띠 젖병 프로젝트 #2 2024 푸른용 젖병 제품 인쇄디자인 및 패키지 제품 사진 촬영을 포함한 상세페이지 디자인 작업.'
   },
   {
     id: '5',
+    title: '꿈 찾는 곰, 꿈 찾는 토끼',
+    category: 'Brand Identity • Digital Design',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/1112.jpg?raw=true',
+    galleryImages: [
+        'https://github.com/illugh88-lang/kim/blob/main/1232.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/rabbit_ppsu_detail.jpg?raw=true'
+    ],
+    link: '#',
+    description: '꿈찾는 곰,토끼 시리즈, 제품 인쇄 드로잉, 패키징, 제품 촬영을 포함한 상세페이지 작업'
+  },
+    {
+    id: '6',
+    title: 'Brush',
+    category: 'Digital Design •Package disign',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/BG_longB_triple_detail_2.gif?raw=true',
+    galleryImages: [
+        'https://github.com/illugh88-lang/kim/blob/main/BG_longB_triple_detail.jpg?raw=true',
+    ],
+    link: '#',
+    description: '롱바디 브러쉬 패키지 및 제품 촬영 및 동영상 촬영, 상세페이지 작업'
+  },
+    {
+    id: '7',
+    title: 'SNS 인스타',
+    category: 'SNS • Digital Design',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/2025_new.jpg?raw=true',
+    galleryImages: [
+        'https://github.com/illugh88-lang/kim/blob/main/is_2024_B.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/250114_in.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/1080_1080_4.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/insta_W-set_3.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/insta_wash_1.jpg?raw=true',
+
+    ],
+    link: '#',
+    description: '인스타 카드 뉴스, 이미지 제작 및 동영상 촬영 및 편집 업로드'
+  },
+    {
+    id: '5',
+    title: 'PACKAGE DESIGN',
+    category: 'Brand Identity • Digital Design',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/240807_dayper.jpg?raw=true',
+    galleryImages: [
+        'https://github.com/illugh88-lang/kim/blob/main/240807_dayper.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/240807_joyper.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/240807_venefit.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/241127_%EB%8D%B0%EC%9D%B4%ED%8D%BC.jpg?raw=true'
+    ],
+    link: '#',
+    description: '[시안] 신규 브랜드 런칭 및 브랜드 디자인'
+  },
+    {
+    id: '5',
     title: 'Hydra Lips',
     category: 'Brand Identity • Digital Design',
-    imageUrl: 'https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://github.com/illugh88-lang/kim/blob/main/1112.jpg?raw=true',
+    galleryImages: [
+        'https://github.com/illugh88-lang/kim/blob/main/1232.jpg?raw=true',
+        'https://github.com/illugh88-lang/kim/blob/main/rabbit_ppsu_detail.jpg?raw=true'
+    ],
     link: '#',
-    description: '대담한 컬러와 실험적인 타이포그래피를 활용한 코스메틱 스타트업의 브랜딩 프로젝트입니다.'
+    description: '꿈찾는 곰,토끼 시리즈, 제품 인쇄 드로잉, 패키징, 제품 촬영을 포함한 상세페이지 작업'
   },
-  {
-    id: '6',
-    title: 'Urban Flow',
-    category: 'Photography • Digital Art',
-    imageUrl: 'https://images.unsplash.com/photo-1449156001935-d2864047830e?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-    description: '도시의 역동적인 리듬을 담아낸 디지털 아트워크 시리즈입니다.'
-  },
-  {
-    id: '7',
-    title: 'Minimal Space',
-    category: 'Interior Design • 3D Rendering',
-    imageUrl: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-    description: '공간의 본질에 집중하는 미니멀리즘 인테리어 컨셉 디자인입니다.'
-  },
-  {
-    id: '8',
-    title: 'Digital Horizon',
-    category: 'Web Development • UI Design',
-    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop',
-    isWide: true,
-    link: '#',
-    description: '미래지향적인 기술 트렌드를 반영한 차세대 웹 인터페이스 솔루션입니다.'
-  },
-  {
-    id: '9',
-    title: 'Organic Rhythm',
-    category: 'Motion Graphics • Branding',
-    imageUrl: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-    description: '자연의 곡선미를 활용한 유기적인 형태의 브랜드 아이덴티티 및 모션 그래픽입니다.'
-  },
-  {
-    id: '10',
-    title: 'Crafted Wood',
-    category: 'Product Design • Branding',
-    imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-    description: '장인 정신이 깃든 수제 가구 브랜드를 위한 아날로그적 감성의 디지털 디자인입니다.'
-  }
+
 ];
 
 interface PortfolioGridProps {
   onProjectClick: (project: Project) => void;
+  onShowAll?: () => void;
+  forceShowAll?: boolean;
 }
 
-export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onProjectClick }) => {
+export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onProjectClick, onShowAll, forceShowAll = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const visibleProjects = isExpanded ? ALL_PROJECTS : ALL_PROJECTS.slice(0, 5);
+  const visibleProjects = (isExpanded || forceShowAll) ? ALL_PROJECTS : ALL_PROJECTS.slice(0, 5);
 
   return (
-    <section id="work" className="py-20 px-6 md:px-12 max-w-[1440px] mx-auto border-t border-white/5">
-      <div className="mb-20">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-4 block">• PORTFOLIO</span>
-        <h2 className="text-5xl md:text-6xl font-bold tracking-tight uppercase">Works</h2>
-      </div>
+    <section id="work" className={`${forceShowAll ? '' : 'py-20 border-t border-white/5'} px-0 max-w-[1440px] mx-auto`}>
+      {!forceShowAll && (
+        <div className="mb-20 px-6 md:px-12">
+          <span className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-2 block">• PORTFOLIO</span>
+          <h2 className="text-5xl md:text-6xl font-bold tracking-tight uppercase">Works</h2>
+        </div>
+      )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 gap-y-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24 px-6 md:px-12">
         {visibleProjects.map((project) => (
           <div 
             key={project.id} 
             className={`${project.isWide ? 'md:col-span-2' : ''} group cursor-pointer animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out fill-mode-both`}
             onClick={() => onProjectClick(project)}
           >
-            <div className="overflow-hidden mb-6 aspect-[16/10] md:aspect-auto">
+            <div className="overflow-hidden mb-6 aspect-[1.15/1] bg-[#111]">
               <img 
                 src={project.imageUrl} 
                 alt={project.title} 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
               />
             </div>
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-[11px] uppercase tracking-widest text-white/40">{project.category}</p>
-              </div>
-              <button className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium border-b border-white/20 pb-1 hover:border-white transition-all">
-                View
-                <svg className="w-3 h-3 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </button>
+            
+            <div className="flex flex-col gap-1">
+              <h3 className="text-xl md:text-2xl font-bold uppercase tracking-tight">{project.title}</h3>
+              <p className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white/30 font-semibold">{project.category}</p>
             </div>
+            
+            <div className="mt-4 h-px w-full bg-white/5 group-hover:bg-white/20 transition-colors" />
           </div>
         ))}
       </div>
 
-      {!isExpanded && (
+      {!isExpanded && !forceShowAll && (
         <div className="mt-32 flex justify-center">
           <button 
-            onClick={() => setIsExpanded(true)}
-            className="px-12 py-4 border border-white/20 rounded-full text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-white hover:text-black transition-all hover:scale-105 active:scale-95"
+            onClick={onShowAll || (() => setIsExpanded(true))}
+            className="px-14 py-4 border border-white/20 rounded-full text-[11px] uppercase tracking-[0.4em] font-black hover:bg-white hover:text-black transition-all hover:scale-105 active:scale-95"
           >
-            View All
+            All
           </button>
         </div>
       )}
